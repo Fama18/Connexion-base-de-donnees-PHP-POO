@@ -18,10 +18,10 @@ require_once '../Model/principal.php';
                 </div>
                 <div id="lien">
                     <ul id="naviguer">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="liste_client.php">Liste clients</a></li>
-                        <li><a href="liste_compte.php">Liste des comptes</a></li>
-                        <li><a href="deconnexion.php">Deconnexion</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="List_Client_Physique.php">Clients physiques</a></li>
+                            <li><a href="List_Client_Moral.php">Clients morals</a></li>
+                            <li><a href="List_compte.php">Comptes</a></li>
                     </ul>
                 </div>
                 <br />

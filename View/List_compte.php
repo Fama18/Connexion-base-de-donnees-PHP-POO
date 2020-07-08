@@ -35,7 +35,7 @@
                         <li><a href="../View/compte.php">Compte</a></li>
                     </ul>
                 </nav>
-                <h2 id="CliPhy">Listes des Clients Morals</h2>
+                <h2 id="CliPhy">Listes des comptes</h2>
                 <?php
 
                         try {
@@ -43,14 +43,14 @@
                             // Définir le mode d'erreur PDO comme l'exception
                             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                            $sql = "SELECT * FROM client_moral";
+                            $sql = "SELECT * FROM compte";
                             $result = $db->query($sql);
 
                             if($result->rowCount() > 0) {
-                                echo "<div class=\"table-responsive\" style=\"width:700px;margin-left:80px;border:1px;color:white;background-color:cadetblue\">";
-                                echo "<table class=\"table table-striped table-hover table-bordered\" style=\"border:2px;color:white\"><tr><th>Nom Entreprise</th><th>Adresse</th></th><th>Raison Sociale</th><th>Numéro d'identification</th></tr>";
+                                echo "<div class=\"table-responsive\" style=\"width:820px;margin-left:10px;border:1px;color:white;background-color:cadetblue\">";
+                                echo "<table class=\"table table-striped table-hover table-bordered\" style=\"border:2px;color:white\"><tr><th>Numéro de l'agence</th><th>Numéro Compte</th><th>Clé RIB</th><th>ID Type du compte</th><th>ID Client</th></tr>";
                                 foreach($result as $row) {
-                                    echo "<tr><td style=\"width:200px\">".$row["nomEmployeur"]."</td><td style=\"width:200px\">".$row["AdresseEmployeur"]."</td><td style=\"width:200px\">".$row["raisonSocial"]."</td><td style=\"width:200px\">".$row["numIdent"]."</td></tr>";
+                                echo "<tr><td style=\"width:200px\">".$row["numagence"]."</td><td style=\"width:200px\">".$row["NumCompte"]."</td><td style=\"width:200px\">".$row["cleRib"]."</td><td style=\"width:200px\">".$row["id_Compte"]."</td><td style=\"width:200px\">".$row["id_client_physique"]."</td></tr>";
                                 }
                                 echo "</table>";
                                 echo "</div>";
